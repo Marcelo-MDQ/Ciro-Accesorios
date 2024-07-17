@@ -14,7 +14,7 @@
         <div class="col-md-7 ">
 
           </br>
-          <h4 class="card-title" align="left">La última película reseñada</h4>
+          <h4 class="card-title" align="left">El último accesorio</h4>
           <div class="mt-4 p-4 bg-dark text-white rounded">
             <div class="col-md-12 px-0">
       
@@ -57,13 +57,14 @@
 
           </br>
           <div >
+            <!--
             <h4 class="card-title" align="left">Una nota al azar</h4>
             <h2 >{{ notaportada.titulo }}</h2>
             <p >por {{ notaportada.autor }}</p>
     
             <p>{{ notaportada.textocorto }}</p>
             <p><a target="_blank" href="{{ notaportada.enlace }}">Ir a la nota</a></p>
-
+            -->
           </div>
     
         </div>
@@ -86,9 +87,11 @@
             </div>
             -->
     
+
+            <!--
             {% if peliculassinresenia %}
               <div class="p-4 ">
-                <h4 class="font-italic">Vistas aún sin reseñar</h4>
+                <h4 class="font-italic">En preparación...</h4>
                     <ol class="list-unstyled">
                             {% for peliculasinresenia in peliculassinresenia %}
                               <a href="{% url 'resenia_Pelicula' peliculasinresenia.id %}">
@@ -98,10 +101,11 @@
                     </ol>
               </div>
             {% endif %}
+            -->
 
             {% if peliculasproximamente %}
               <div class="p-4 bg-light text-black rounded">
-                <h4 class="font-italic">Lo que se viene...</h4>
+                <h4 class="font-italic">En preparación...</h4>
                     <ol class="list-unstyled">
                             {% for peliculasproximamente in peliculasproximamente %}
                                 <a href="{% url 'resenia_Pelicula' peliculasproximamente.id %}">
@@ -113,7 +117,7 @@
             {% endif %}
  
             <div class="p-4">
-              <h4 class="font-italic">Buenos sitios</h4>
+              <h4 class="font-italic">Sitios que me gustan</h4>
               <ol class="list-unstyled">
                   <li><a target="_blank" href="https://filmnoirboard.blogspot.com/">Film Noir Board</a></li>
                   <li><a target="_blank" href="https://filmnoir.art.blog/">FilmsNoir.Net</a></li>
@@ -123,6 +127,7 @@
               </ol>
             </div>
 
+            <!--
             <div >
               <h4 class="card-title" align="left">Una película al azar</h4>
               <div class="p-4 bg-light text-black rounded">
@@ -137,6 +142,7 @@
                 </div>
               </div>
             </div>
+            -->
 
 
         </aside>
@@ -146,7 +152,7 @@
 
       </br>
       <div class="card-body bg-light text-black rounded">
-        <h4 class="card-title " align="center">Otras películas reseñadas últimamente</h4>
+        <h4 class="card-title " align="center">Otros accesorios</h4>
         <div class="container  " align="center">
                 {% for pelicula in peliculas %}
                     <a href="{% url 'resenia_Pelicula' pelicula.id %}">
